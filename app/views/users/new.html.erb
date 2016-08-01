@@ -1,0 +1,41 @@
+<h3>Register For DBC List</h3>
+
+<% if @user.errors.any? %>
+  <div id="error_message">
+    <h3>
+       <%= pluralize(@user.errors.count, "error") %> prohibited finishing your registration:
+    </h3>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.label :username, 'Username' %>
+    <%= f.text_field :username %>
+  </div>
+
+  <div>
+    <%= f.label :email, 'Email' %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :password, 'Password' %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation, 'Password Confirmation' %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div>
+  <%= f.submit 'Register' %>
+  </div>
+
+<% end %>

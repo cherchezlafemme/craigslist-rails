@@ -11,6 +11,8 @@
   <body>
     <header>
       <h1>DBC List<h1>
+      <p><%= link_to "Login", new_session_path %> </p>
+      <p><%= link_to "Register", new_user_path %> </p>
       <p>All a newbie coder could ever need</p>
       <%= link_to "Add New Category", new_category_path, id: "new-category-link" %>
     </header>
