@@ -2,3 +2,6 @@
   <%= @category.name %>
 </h2>
 
+<%= link_to "Delete Category", { action: :destroy, id: @category.id }, method: :delete %>
+<%= link_to "Update Category", edit_category_path %>
+

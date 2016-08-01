@@ -1,0 +1,6 @@
+<%= form_for @category, html: { class: 'form', id: 'categories_form' } do |f| %>
+  <%= f.label :name, "Category Name:" %>
+  <%= f.text_field :name %>
+
+  <%= f.submit "Add category" %>
+<% end %>

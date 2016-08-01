@@ -1,8 +1,4 @@
 <h2>Create a new category:</h2>
 
-<%= form_for @category, url: { action: 'create' }, html: { class: 'form', id: 'categories_form' } do |f| %>
-  <%= f.label :name, "Category Name:" %>
-  <%= f.text_field :name %>
+<%= render 'form' %>
 
-  <%= f.submit "Add category" %>
-<% end %>
