@@ -19,15 +19,7 @@
     <%= f.text_field :username %>
   </div>
 
-  <div>
-    <%= f.label :email, 'Email' %>
-    <%= f.email_field :email %>
-  </div>
-
-  <div>
-    <%= f.label :password, 'Password' %>
-    <%= f.password_field :password %>
-  </div>
+  <%= render :partial => 'users_sessions/login_register_form', :locals => { :f => f}  %>
 
   <div>
     <%= f.label :password_confirmation, 'Password Confirmation' %>

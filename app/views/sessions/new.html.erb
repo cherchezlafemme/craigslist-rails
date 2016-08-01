@@ -1,0 +1,10 @@
+
+<%= form_for @user do |f| %>
+
+  <%= render :partial => 'users_sessions/login_register_form', :locals => { :f => f}  %>
+
+  <div>
+    <%= f.submit 'Login' %>
+  </div>
+
+<% end %>
