@@ -2,6 +2,7 @@ class CategoriesController < ApplicationController
 
   def index
     # main page with list of all avail categories. Links to add new category.
+    @categories = Category.all.order("name ASC")
   end
 
   def new

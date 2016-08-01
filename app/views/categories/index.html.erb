@@ -1,2 +1,8 @@
-<h2>This is categories index page</h2>
-<%= link_to "New category", new_category_path %>
+<h2>Welcome to DBC List</h2>
+<p>
+  Please browse our categories to find anything and everything you might need to get started in coding.
+</p>
+
+<% @categories.each do |category| %>
+  <h3 class="category_name"><%= link_to category.name, category %>
+<% end %>

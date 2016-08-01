@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <header>
+      <h1>DBC List<h1>
+      <p>All a newbie coder could ever need</p>
+      <%= link_to "Add New Category", new_category_path, id: "new-category-link" %>
+    </header>
     <%= yield %>
+    <footer>
+    </footer>
   </body>
 </html>
